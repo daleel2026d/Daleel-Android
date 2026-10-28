@@ -1,0 +1,157 @@
+{
+    "universities": [
+        {
+            "id": "uni_001",
+            "name": "King Saud University",
+            "description": "Leading public university",
+            "city": "Riyadh",
+            "type": "government",
+            "websiteUrl": "https://ksu.edu.sa",
+            "logoUrl": "",
+            "coverImageUrl": "",
+            "colleges": [],
+            "gallery": [],
+            "posts": []
+        },
+        {
+            "id": "uni_002",
+            "name": "Effat University",
+            "description": "Private university",
+            "city": "Jeddah",
+            "type": "private",
+            "websiteUrl": "https://effatuniversity.edu.sa",
+            "logoUrl": "",
+            "coverImageUrl": "",
+            "colleges": [],
+            "gallery": [],
+            "posts": []
+        },
+        {
+            "id": "uni_003",
+            "name": "KAUST",
+            "description": "Research university",
+            "city": "Thuwal",
+            "type": "international",
+            "websiteUrl": "https://kaust.edu.sa",
+            "logoUrl": "",
+            "coverImageUrl": "",
+            "colleges": [],
+            "gallery": [],
+            "posts": []
+        }
+    ],
+    "scholarships": [
+        {
+            "id": "sch_001",
+            "name": "Saudi Research Grant",
+            "country": "Saudi Arabia",
+            "fundingType": "research",
+            "deadline": "2026-02-02T04:40:00",
+            "imageUrl": "",
+            "description": "Research funding opportunity",
+            "officialLink": "https://moe.gov.sa"
+        },
+        {
+            "id": "sch_002",
+            "name": "Global Leadership Scholarship",
+            "country": "USA",
+            "fundingType": "full",
+            "deadline": "2026-09-30",
+            "imageUrl": "",
+            "description": "Leadership excellence grant",
+            "officialLink": "https://fulbrightprogram.org"
+        },
+        {
+            "id": "sch_003",
+            "name": "Women in STEM",
+            "country": "UK",
+            "fundingType": "partial",
+            "deadline": "2026-10-15",
+            "imageUrl": "",
+            "description": "STEM academic support",
+            "officialLink": "https://britishcouncil.org"
+        }
+    ],
+    "opportunities": [
+        {
+            "id": "opp_001",
+            "title": "Flutter Bootcamp",
+            "description": "Hands-on Flutter workshop",
+            "organizer": "Google Developer Group",
+            "type": "workshop",
+            "attendance": "online",
+            "targetAudience": "students",
+            "date": "2026-08-10",
+            "registrationDeadline": "2026-08-01",
+            "price": "free",
+            "registrationLink": "https://developers.google.com",
+            "imageUrl": "",
+            "location": "Online"
+        },
+        {
+            "id": "opp_002",
+            "title": "AI Conference",
+            "description": "Conference on AI developments",
+            "organizer": "Tech Hub",
+            "type": "conference",
+            "attendance": "hybrid",
+            "targetAudience": "graduates",
+            "date": "2026-09-12",
+            "registrationDeadline": "2026-09-02",
+            "price": "paid",
+            "registrationLink": "https://ai.google.dev",
+            "imageUrl": "",
+            "location": "Riyadh"
+        },
+        {
+            "id": "opp_003",
+            "title": "Design Sprint",
+            "description": "UX design sprint program",
+            "organizer": "Misk Foundation",
+            "type": "training",
+            "attendance": "in-person",
+            "targetAudience": "all",
+            "date": "2026-10-20",
+            "registrationDeadline": "2026-10-05",
+            "price": "free",
+            "registrationLink": "https://misk.org.sa",
+            "imageUrl": "",
+            "location": "Jeddah"
+        }
+    ],
+    "users": [
+        {
+            "id": "user_001",
+            "savedOpportunities": [
+                "opp_001",
+                "opp_003"
+            ],
+            "favorites": [
+                "uni_001",
+                "sch_002"
+            ],
+            "track": "student",
+            "average": 4.7
+        },
+        {
+            "id": "user_002",
+            "savedOpportunities": [
+                "opp_002"
+            ],
+            "favorites": [
+                "uni_002"
+            ],
+            "track": "graduate",
+            "average": 4.2
+        },
+        {
+            "id": "user_003",
+            "savedOpportunities": [],
+            "favorites": [
+                "sch_001"
+            ],
+            "track": "staff",
+            "average": 3.9
+        }
+    ]
+}

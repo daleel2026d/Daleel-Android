@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "415167030737",
+    "project_id": "uni-guide-app-43226",
+    "storage_bucket": "uni-guide-app-43226.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415167030737:android:abe981a9c2434486c4acf0",
+        "android_client_info": {
+          "package_name": "com.example.uni_guide_dashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415167030737-r2lrdhtbt94c9vm73tvjgp1sapdkc9os.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfL8iHo-8uzac1gfKE---o8yxo9WE7cbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415167030737-r2lrdhtbt94c9vm73tvjgp1sapdkc9os.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415167030737-aptdc18t01iiavuvgfqi1563426sm2li.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.uniGuideDashboard"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415167030737:android:cdd4ac5751a655fdc4acf0",
+        "android_client_info": {
+          "package_name": "com.uni_guide_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415167030737-9i979ig7rt3in59qhag5ukjilic08euc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uni_guide_app",
+            "certificate_hash": "740e3e6395dc33038c236374afe549d7a2a3cc24"
+          }
+        },
+        {
+          "client_id": "415167030737-c48ptluh0b2u6kftftm0v6badfi5urpr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uni_guide_app",
+            "certificate_hash": "38f74c83896987f4740c7d3e1f365bc6e8f0f0b1"
+          }
+        },
+        {
+          "client_id": "415167030737-fvd5ebivo53d8ekktrvm4jhj2adfsg2p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uni_guide_app",
+            "certificate_hash": "34b40b73f8f48741c2da9d9368c4ac20a45bdfe6"
+          }
+        },
+        {
+          "client_id": "415167030737-o12ancmghtu6hoefjudtr5cloc8pki6s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uni_guide_app",
+            "certificate_hash": "aac98ac261315373640a7b5f6284727458b8bf79"
+          }
+        },
+        {
+          "client_id": "415167030737-r2lrdhtbt94c9vm73tvjgp1sapdkc9os.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfL8iHo-8uzac1gfKE---o8yxo9WE7cbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415167030737-r2lrdhtbt94c9vm73tvjgp1sapdkc9os.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "415167030737-aptdc18t01iiavuvgfqi1563426sm2li.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.uniGuideDashboard"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

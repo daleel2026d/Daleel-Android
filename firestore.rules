@@ -1,0 +1,71 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // دالة للتحقق من إيميل المدير العام المصرح له
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == 'daleel2026d@gmail.com';
+    }
+
+    // دالة للتحقق من مشرفي مراكز التدريب المعتمدين أو المدير العام
+    function isTrainingCenterManager() {
+      return request.auth != null && (
+        isAdmin() ||
+        (
+          exists(/databases/$(database)/documents/training_centers/_managers_settings) &&
+          request.auth.token.email in get(/databases/$(database)/documents/training_centers/_managers_settings).data.managerEmails
+        ) ||
+        (
+          exists(/databases/$(database)/documents/settings/training_centers) &&
+          request.auth.token.email in get(/databases/$(database)/documents/settings/training_centers).data.managerEmails
+        )
+      );
+    }
+
+    // 1. الجامعات والكليات: القراءة متاحة للجميع، الإضافة والحذف للمدير العام، والتعديل للمدير العام أو مدير الجامعة
+    match /universities/{uniId} {
+      allow read: if true;
+      allow create, delete: if isAdmin();
+      allow update: if request.auth != null && (
+        isAdmin() ||
+        (resource.data.managerEmail != null && request.auth.token.email == resource.data.managerEmail) ||
+        (resource.data.adminEmail != null && request.auth.token.email == resource.data.adminEmail)
+      );
+    }
+
+    // 2. المنح الدراسية: القراءة للجميع، الإدارة للمدير فقط
+    match /scholarships/{schId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // 3. الفرص والفعاليات: القراءة للجميع، الإدارة للمدير فقط
+    match /opportunities/{oppId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // 4. مراكز التدريب: القراءة للجميع، الإضافة والحذف للمدير العام، والتعديل للمدير العام أو مدير مركز التدريب
+    match /training_centers/{centerId} {
+      allow read: if true;
+      allow create, delete: if isAdmin();
+      allow update: if request.auth != null && (
+        isAdmin() ||
+        (resource.data.managerEmail != null && request.auth.token.email == resource.data.managerEmail) ||
+        (resource.data.adminEmail != null && request.auth.token.email == resource.data.adminEmail)
+      );
+    }
+
+    // 5. الإعدادات العامة: الإدارة للمدير العام
+    match /settings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // 6. حسابات المستخدمين: كل مستخدم يتحكم بحسابه فقط، والمدير يمكنه القراءة
+    match /users/{userId} {
+      allow read: if request.auth != null && (request.auth.uid == userId || isAdmin());
+      allow write: if request.auth != null && (request.auth.uid == userId || isAdmin());
+    }
+  }
+}
